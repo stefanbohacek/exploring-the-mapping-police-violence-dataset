@@ -30,7 +30,7 @@ for index in data:
         if year not in years_processed:
             stats.append ( {
                 "Year": year,
-                "Murders": 0,
+                "Killings": 0,
                 "Charges": 0,
                 "Convictions": 0
             } )
@@ -44,7 +44,7 @@ for index in data:
         if stats[current_index]["Charges"] not in statuses_charges:
             statuses_charges.append( stats[current_index]["Charges"] )
 
-        stats[current_index]["Murders"] += 1
+        stats[current_index]["Killings"] += 1
 
         if "Charged" in data[index]["Criminal Charges?"]:
             stats[current_index]["Charges"] += 1
